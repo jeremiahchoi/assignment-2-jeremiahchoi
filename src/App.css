@@ -1,1 +1,119 @@
-/* Paste your Assignment 1 styles.css here. Keep the icons in src/assets/ so url(assets/...) paths keep working. */
+/* Header: red bar with menu, quick find, task counter */
+.main-header {
+    background-color: #dc4c3e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+}
+
+.task-counter {
+    margin-left: auto;
+}
+
+/* Page layout: flex row, fixed sidebar + flexible main*/
+.page-layout {
+    display: flex;
+}
+
+/* Nav: 300px nav with icons and task counts */
+nav {
+    box-sizing: border-box;
+    flex: 0 0 300px;
+    background-color: #fefbf2;
+    padding: 24px;
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.task-count {
+    font-size: 12px;
+    color: #7e7d79;
+}
+
+main h1 {
+    font-size: 20px;
+    margin: 0 0 16px;
+}
+
+main li {
+    padding: 12px 0;
+}
+
+main label {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+main input[type="checkbox"] {
+    appearance: none;
+    width: 19px;
+    height:19px;
+    flex-shrink: 0;
+    margin:0;
+    border: 1px solid #999999;
+    border-radius: 50%;
+}
+
+main input[type="checkbox"]:checked {
+    background-color: #d53535;
+}
+
+@media (max-width: 480px) {
+    nav {display: none; }
+}
+
+button, input {
+    font-family: inherit;  
+    font-size: inherit;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    margin: 0;
+}
+
+.filters button.active {
+  background: #dc4c3e;
+  color: #ffffff;
+}
+
+.filters button:hover {
+  background: #dcd9d9;
+  cursor: pointer;
+}
+
+main li:hover {
+  background: #dcd9d9;
+}
+
+.done {
+  text-decoration: line-through;
+}
